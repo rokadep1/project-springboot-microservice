@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: win-minikube
+    runs-on: ubuntu-minikube
 
     steps:
     - name: Checkout code
