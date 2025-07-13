@@ -31,3 +31,13 @@ jobs:
       run: |
         docker build -t prd23699/microservice:${{ github.sha }} .
         docker push prd23699/microservice:${{ github.sha }}
+
+    - name: Deploy to Minikube using kubectl
+      run: |
+        kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f k8s/service.yaml
+
+    - name: Verify Deployment
+      run: |
+        kubectl rollout status deployment/microservice-deployment
+        kubectl get services
