@@ -13,9 +13,10 @@ public class MicroserviceApplication {
 }
 
 @RestController
-class GreetingController {
-    @GetMapping("/greeting")
-    public String greet() {
+class HomeController {
+
+    @GetMapping("/")
+    public String home() {
         return "Hello from ABC Technologies!";
     }
 }
