@@ -29,8 +29,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t prd23699/microservice:${{ github.sha }} .
-        docker push prd23699/microservice:${{ github.sha }}
+        docker build -t prd23699/microservice:latest .
+        docker push prd23699/microservice:latest
 
     - name: Deploy to Minikube using kubectl
       run: |
