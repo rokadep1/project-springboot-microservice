@@ -42,7 +42,3 @@ jobs:
         kubectl rollout status deployment/microservice-deployment
         kubectl get services 
 
-defaults:
-  run:
-    shell: bash
-    working-directory: "./"  # Wrap if using long paths or relative
